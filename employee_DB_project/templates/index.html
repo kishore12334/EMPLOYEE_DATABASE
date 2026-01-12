@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Add Employee</h2>
+    <form method="post" action="/add">
+        <input type="text" name="emp_name" placeholder="Name" required>
+        <input type="text" name="gender" placeholder="Gender" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="designation" placeholder="Designation" required>
+        <button type="submit">Add Employee</button>
+    </form>
+    <br>
+    <a href="/view">View Employees</a> |
+    <a href="/logout">Logout</a>
+</div>
+</body>
+</html>

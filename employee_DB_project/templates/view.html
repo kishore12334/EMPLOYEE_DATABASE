@@ -1,0 +1,55 @@
+<!-- templates/view.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="table-container">
+    <h2>Employee List</h2>
+
+    {% if request.args.get('undo') %}
+    <div id="undoBox" class="undo-box">
+        Employee deleted.
+        <a href="/undo"><button style="width:auto;">Undo</button></a>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.getElementById("undoBox").style.display = "none";
+        }, 5000);
+    </script>
+    {% endif %}
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Action</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp[0] }}</td>
+            <td>{{ emp[1] }}</td>
+            <td>{{ emp[2] }}</td>
+            <td>{{ emp[3] }}</td>
+            <td>{{ emp[4] }}</td>
+            <td>{{ emp[5] }}</td>
+            <td>
+                <a href="/delete/{{ emp[0] }}" onclick="return confirm('Delete this employee?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/index">Add Employee</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 360px;
+    margin: 40px auto;
+    background: #111827;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f9fafb;
+}
+
+/* ===== FORMS ===== */
+form input {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+form input::placeholder {
+    color: #9ca3af;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* ===== BUTTONS ===== */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #1f2933;
+    word-wrap: break-word;
+}
+
+th {
+    background: #1e40af;
+    color: #f9fafb;
+}
+
+tr:nth-child(even) {
+    background: #020617;
+}
+
+/* ===== COLUMN WIDTH ===== */
+th:nth-child(1), td:nth-child(1) { width: 60px; }
+th:nth-child(2), td:nth-child(2) { width: 140px; }
+th:nth-child(3), td:nth-child(3) { width: 90px; }
+th:nth-child(4), td:nth-child(4) { width: 120px; }
+th:nth-child(5), td:nth-child(5) { width: 220px; }
+th:nth-child(6), td:nth-child(6) { width: 140px; }
+th:nth-child(7), td:nth-child(7) { width: 90px; }
+
+/* ===== LOGIN PAGE ===== */
+.login-container {
+    max-width: 420px;
+}
+
+/* ===== SUCCESS PAGE ===== */
+.success-box {
+    max-width: 380px;
+    text-align: center;
+}
+
+/* ===== UNDO BOX ===== */
+.undo-box {
+    background: #78350f;
+    color: #fde68a;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ===== ADD LINK ===== */
+.add-link {
+    display: inline-block;
+    margin-top: 15px;
+}
